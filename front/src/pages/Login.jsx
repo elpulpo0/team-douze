@@ -6,7 +6,7 @@ function Login() {
 
   return (
     <>
-      <div className='flex justify-center'>
+      <div className='background-container'>
         
       </div>
     </>

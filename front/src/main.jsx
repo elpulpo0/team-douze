@@ -5,7 +5,7 @@ import {
     createBrowserRouter,
     RouterProvider,
   } from "react-router-dom";
-import App from './pages/App.jsx'
+import Start from './pages/start/start.jsx'
 import Login from './pages/Login.jsx'
 import SelectScenario from './pages/SelectScenario.jsx'
 import Header from './layout/Header.jsx'
@@ -13,7 +13,7 @@ import Header from './layout/Header.jsx'
 const router = createBrowserRouter([
     {
       path: "/", 
-      element: <App />,
+      element: <Start />,
     },
     {
       path: "/login",
