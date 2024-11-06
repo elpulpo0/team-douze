@@ -8,13 +8,13 @@ Pour commencer, suivez les étapes ci-dessous :
 ```bash
 cd back
 npm install
-npm start
+npm run start
 ```
 2. Installer les dépendances et démarrer le serveur frontend
 ```bash
 cd front
 npm install
-npm start
+npm run dev
 ```
 
 3. Accéder à l'application via le navigateur
