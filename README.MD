@@ -19,7 +19,7 @@ npm start
 
 3. Accéder à l'application via le navigateur
 ```bash
-http://localhost:3000
+http://localhost:5173
 ```
 
 ## Structure du projet
