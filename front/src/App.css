@@ -40,3 +40,70 @@
 .read-the-docs {
   color: #888;
 }
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 10px;
+  padding: 10px;
+  align-items: center;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.triangle_left {
+  --r: 10px;
+  height: 4vw;
+  position: absolute;
+  right: 55vw;
+  aspect-ratio: cos(30deg);
+  --_g: calc(tan(60deg) * var(--r)) left var(--r), #000 98%, #0000 101%;
+  mask: 
+    conic-gradient(from 60deg at calc(3 * var(--r)/2 - 100%), #000 60deg, #0000 0) 
+      0 0 / calc(100% - 3 * var(--r) / 2) 100% no-repeat,
+    radial-gradient(var(--r) at calc(100% - 2 * var(--r)) 50%, #000 98%, #0000 101%),
+    radial-gradient(var(--r) at top var(--_g)),
+    radial-gradient(var(--r) at bottom var(--_g));
+  
+  clip-path: polygon(100% 50%, 0 100%, 0 0);
+  background: linear-gradient(45deg, #FA6900, #C02942);
+  transform: rotate(180deg);
+}
+
+.triangle_right {
+  --r: 10px;
+  height: 4vw;
+  position: absolute;
+  left: 55vw;
+  aspect-ratio: cos(30deg);
+  --_g: calc(tan(60deg) * var(--r)) left var(--r), #000 98%, #0000 101%;
+  mask: 
+    conic-gradient(from 60deg at calc(3 * var(--r)/2 - 100%), #000 60deg, #0000 0) 
+      0 0 / calc(100% - 3 * var(--r) / 2) 100% no-repeat,
+    radial-gradient(var(--r) at calc(100% - 2 * var(--r)) 50%, #000 98%, #0000 101%),
+    radial-gradient(var(--r) at top var(--_g)),
+    radial-gradient(var(--r) at bottom var(--_g));
+  
+  clip-path: polygon(100% 50%, 0 100%, 0 0);
+  background: linear-gradient(45deg, #FA6900, #C02942);
+}
+
+.triangle_left:hover {
+  transform: translateX(-5px) rotate(180deg);
+}
+
+.triangle_right:hover {
+  transform: translateX(5px);
+}
+
+
