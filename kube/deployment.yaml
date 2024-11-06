@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: $PROJECT_NAME-deployment
+  labels:
+    app: $PROJECT_NAME
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: $PROJECT_NAME
+  template:
+    metadata:
+      labels:
+        app: $PROJECT_NAME
+    spec:
+      containers:
+        - name: $PROJECT_NAME
+          image: $IMAGE
+          ports:
+            - containerPort: 80
+      #     volumeMounts:
+      #       - mountPath: /root/pb_data
+      #         name: data-storage
+      # volumes:
+      #   - name: data-storage
+      #     persistentVolumeClaim:
+      #       claimName: $PROJECT_NAME-pvc
+      restartPolicy: Always
+      imagePullSecrets:
+        - name: dockerconfigjson-github-com

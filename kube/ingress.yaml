@@ -1,0 +1,22 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: $PROJECT_NAME-ingress
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt
+spec:
+  tls:
+    - hosts:
+        - $PROJECT_NAME.alert4sud.fr
+      secretName: $PROJECT_NAME-sec
+  rules:
+    - host: $PROJECT_NAME.alert4sud.fr
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: $PROJECT_NAME-service
+                port:
+                  number: 80
