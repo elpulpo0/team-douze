@@ -1,31 +1,43 @@
-import { useState } from 'react';
+import { useNavigate } from "react-router-dom";
 import '../App.css';
-import './start/cadre.css';
-import video from '../assets/videos/tsunami.mp4';
-import { useNavigate } from 'react-router-dom';
-import Button from 'react-bootstrap/Button';
+import Button_back from '../components/Button_back';
+import Button_custom from '../components/Button_custom';
 
 function Tsunami() {
+    const navigate = useNavigate();
 
-  const navigate = useNavigate() 
+    const back = (e) => {
+        e.preventDefault();
+        navigate('/selectScenario');
+    };
 
-  const handleClick = (e) => {
-    e.preventDefault();
-    navigate('/selectScenario');
-  };
+    const startGame = (e) => {
+        e.preventDefault();
+        navigate('/');
+    };
 
-  return (
-    <>
-      <div className="background-container">
-        <video className='video' src={video} controls autoPlay loop>
-          Your browser does not support the video tag.
-        </video>
-        <Button  variant="outline-dark" className='custom-click3'> Commencez le scénario </Button>
-        <Button  variant="danger" className='custom-click4' onClick={handleClick}> Retour à la selection </Button>
-        
-      </div>
-    </>
-  );
+    return (
+        <>
+            <div className="flex justify-center background-container">
+                <div className="video-container">
+                    <video
+                        autoPlay
+                        controls
+                        className="video"
+                    >
+                        <source src="./videos/tsunami.mp4" type="video/mp4" />
+                        Your browser does not support the video tag.
+                    </video>
+                    <div className="button-container button_start">
+                        <Button_custom label="Lancez le scénario" onClick={startGame} />
+                    </div>
+                </div>
+            </div >
+            <div className="button-container_back">
+                <Button_back label="Retour" onClick={back} />
+            </div>
+        </>
+    );
 }
 
 export default Tsunami;

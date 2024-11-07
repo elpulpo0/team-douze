@@ -5,12 +5,14 @@ import {
     createBrowserRouter,
     RouterProvider,
   } from "react-router-dom";
-import Start from './pages/start/start.jsx'
+import Start from './pages/Start.jsx'
 import Login from './pages/Login.jsx'
 import SelectScenario from './pages/SelectScenario.jsx'
-import Tsunami from './pages/Tsunami.jsx'
+import EmergencyBag from './pages/EmergencyBag.jsx'
 import Inondation from './pages/Inondation.jsx'
+import Tsunami from './pages/Tsunami.jsx'
 import Seisme from './pages/Seisme.jsx'
+import Game from './pages/Game.jsx'
 import Header from './layout/Header.jsx'
 
 const router = createBrowserRouter([
@@ -27,23 +29,34 @@ const router = createBrowserRouter([
       element: <SelectScenario />,
     },
     {
-      path: "/tsunami",
-      element: <Tsunami />,
+      path: "/emergency-bag",
+      element: <EmergencyBag />,
     },
     {
       path: "/seisme",
       element: <Seisme />,
     },
+
     {
       path: "/inondation",
       element: <Inondation />,
+    },
+
+    {
+      path: "/tsunami",
+      element: <Tsunami />,
+    },
+
+    {
+      path: "/game",
+      element: <Game />,
     },
 
   ]);
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <Header />
+    {/* <Header /> */}
     <RouterProvider router={router} />
   </StrictMode>,
 )
