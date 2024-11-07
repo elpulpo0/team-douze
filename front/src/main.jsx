@@ -13,6 +13,7 @@ import Inondation from './pages/Inondation.jsx'
 import Tsunami from './pages/Tsunami.jsx'
 import Seisme from './pages/Seisme.jsx'
 import Game from './pages/Game.jsx'
+import Finish from './pages/Finish.jsx'
 import Header from './layout/Header.jsx'
 
 const router = createBrowserRouter([
@@ -50,6 +51,11 @@ const router = createBrowserRouter([
     {
       path: "/game",
       element: <Game />,
+    },
+
+    {
+      path: "/Finish",
+      element: <Finish />,
     },
 
   ]);
