@@ -139,7 +139,8 @@ const scenario = {
     evenements: [
         {
             image: "innondation-1.jpg",
-            context: "Il fait beau, je suis dehors, maman vient de recevoir une alerte sur son téléphone: Vigilance Orange \"pluie-inondations\"",
+            context:
+                'Il fait beau, je suis dehors, maman vient de recevoir une alerte sur son téléphone: Vigilance Orange "pluie-inondations"',
             text: "Vigilance Orange ? Mais il fait si beau...",
             feedback:
                 "En cas de vigilance orange, il faut vite rentrer chez soi se mettre à l'abri. La météo est imprévisible, la situation peut très vite s'aggraver.",
@@ -171,7 +172,8 @@ const scenario = {
         },
         {
             image: "innondation-2.jpg",
-            context: "Je suis chez moi, il y a de gros nuages gris dehors, et le vent commence un peu à souffler. Mais il ne pleut pas encore...",
+            context:
+                "Je suis chez moi, il y a de gros nuages gris dehors, et le vent commence un peu à souffler. Mais il ne pleut pas encore...",
             text: "Je m'ennuie... et si j'allais jouer au foot dehors avec les copains ?",
             feedback:
                 "Même si la météo ne semble pas inquiétante, on ne prend pas de risque et on reste à l'abri chez soi. On évite de téléphoner afin de libérer les lignes pour les secours.",
@@ -202,7 +204,8 @@ const scenario = {
         },
         {
             image: "innondation-3.jpg",
-            context: "Il pleut très fort dehors, je décide de jouer à la console.",
+            context:
+                "Il pleut très fort dehors, je décide de jouer à la console.",
             text: "Mince ! La console est restée dans la voiture au parking !",
             feedback:
                 "En cas de risque d'inondations, il ne faut surtout pas descendre dans les sous-sols ou les parkings souterrains. On ferme bien les portes et fenêtres et on écoute la radio pour se tenir informé auprès des autorités.",
@@ -232,8 +235,9 @@ const scenario = {
             },
         },
         {
-            image: "innondation-4.jpg",
-            context: "Il y a vraiment beaucoup d'eau dehors, l'eau commence même à rentrer dans la maison !",
+            image: "innondation-4.png",
+            context:
+                "Il y a vraiment beaucoup d'eau dehors, l'eau commence même à rentrer dans la maison !",
             text: "C'est vraiment inquiétant...",
             feedback:
                 "Si l'on constate une montée des eaux, on se réfugie en étage, on ne descend pas dans les sous-sols. On évacue uniquement sur ordre des autorités avec son kit d'urgence.",

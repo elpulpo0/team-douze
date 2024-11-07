@@ -28,15 +28,18 @@ useEffect(() => {
 }, [eventIndex])
 
 useEffect(() => {
-    sleep(3000).then(() => { 
-        if(Scenario.evenements.length-1 > eventIndex) {
-            setEventIndex(eventIndex+1) 
-        } else {
-            console.log({ score: score, gold: gold })
-            navigate("/emergency-bag", { state: { score: score, gold: gold } });
-        }
+    if(feedback) {
+        sleep(3000).then(() => { 
+            if(Scenario.evenements.length-1 > eventIndex) {
+                setEventIndex(eventIndex+1) 
+            } else {
+                console.log({ score: score, gold: gold })
+                navigate("/emergency-bag", { state: { score: score, gold: gold } });
+            }
+    
+         });
+    }
 
-     });
 }, [feedback])
 
 const loadEvent = () => {
