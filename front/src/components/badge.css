@@ -1,5 +1,6 @@
 .badge {
     margin: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 1);
     position: center;
     display: inline-block;
     text-align: center;
@@ -19,9 +20,9 @@
   }
   
   .badge.earned {
-    box-shadow: 0px 0px 10px gold;
-    background: #ffeb3b;
-    color: #333;
+    box-shadow: #FFA69E;
+    background: #FFA69E;
+    /* color: #333; */
   }
   
   .badge-icon-container {
@@ -79,7 +80,7 @@
     align-items: center;
     justify-content: flex-start; /* Start content from the top */
     min-height: 100vh; /* Full viewport height */
-    padding-top: 50px; /* Adjust for vertical positioning from the top */
+    padding-top: 7.5vw; /* Adjust for vertical positioning from the top */
     box-sizing: border-box;
     text-align: center;
   }

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import Button_custom from '../components/Button_custom';
-import Button_back from '../components/Button_back';
+import Button_custom from '../components/buttons/Button_custom';
+import Button_back from '../components/buttons/Button_back';
 
 
 function SelectScenario() {
