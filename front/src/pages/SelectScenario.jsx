@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import "./start/cadre.css"
 
 function SelectScenario() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -17,18 +18,21 @@ function SelectScenario() {
     );
   };
 
-  const handleButtonClick = () => {
+  const handleButtonClick = (e) => {
+    e.preventDefault();
     const routes = ["/inondation", "/seisme", "/tsunami"];
     navigate(routes[currentIndex]);
   };
 
   return (
-    <div className="flex justify-center">
+    <div className="background-container">
+
+      <div className='custom-cadre2'>
+        <button className="custom-click2" onClick={handleButtonClick}>{buttons[currentIndex]}</button>
+         </div>
+      <h2 className="h2-titre"> Choix de la Sensibilisation</h2>
       <div className="triangle_left" onClick={scrollLeft}></div>
 
-      <div className="button-container">
-        <button onClick={handleButtonClick}>{buttons[currentIndex]}</button>
-      </div>
 
       <div className="triangle_right" onClick={scrollRight}></div>
     </div>

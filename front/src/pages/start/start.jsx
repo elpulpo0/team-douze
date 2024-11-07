@@ -14,8 +14,10 @@ function start() {
   return (
     <>
       <div  className="background-container">
+        <div className='custom-cadre'>
         <h1 className='h1-titre'>Sensibilisation environnementale</h1>
         <Button  variant="outline-dark" className='custom-click' onClick={handleClick}> Commencez l'initiation </Button>
+        </div>
       </div>
     </>
   )
