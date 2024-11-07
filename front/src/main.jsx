@@ -10,6 +10,7 @@ import Login from './pages/Login.jsx'
 import SelectScenario from './pages/SelectScenario.jsx'
 import EmergencyBag from './pages/EmergencyBag.jsx'
 import Inondation from './pages/Inondation.jsx'
+import Tsunami from './pages/Tsunami.jsx'
 import Seisme from './pages/Seisme.jsx'
 import Game from './pages/Game.jsx'
 import Header from './layout/Header.jsx'
@@ -39,6 +40,11 @@ const router = createBrowserRouter([
     {
       path: "/inondation",
       element: <Inondation />,
+    },
+
+    {
+      path: "/tsunami",
+      element: <Tsunami />,
     },
 
     {
