@@ -122,6 +122,22 @@ h1 {
     border-radius: 10px;
   }
   
-  .close_butoon {
-    right:  3px;
+  .menu-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 1em;
+    width: 35%;
+    margin-top: -2.5em;
+  }
+
+  .menu {
+    width: 45%;
+  }
+
+  .dropdown {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
   }
