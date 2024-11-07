@@ -16,67 +16,55 @@ const [feedback, setFeedback] = useState(null)
 const [background, setBackground] = useState(null)
 const [score, setScore] = useState(0)
 
-function sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-  }
 
-useEffect(() => {
-    loadEvent()
-}, [])
 
-useEffect(() => {
 
-    loadEvent()
-}, [eventIndex])
 
-const loadEvent = () => {
-    setFeedback(null)
-    setBackground(Scenario.evenements[eventIndex].image)
-    setEventName(Scenario.evenements[eventIndex].text)
-    setEventContext(Scenario.evenements[eventIndex].context)
-    setEventActions(Scenario.evenements[eventIndex].actions)
-}
-
-const loadFeedback = (is_success) => {
-    if(is_success) {
-        setFeedback(Scenario.evenements[eventIndex].feedback)
-        updateScore(Scenario.evenements[eventIndex].avancement.succes.value)
-    } else {
-        setFeedback(Scenario.evenements[eventIndex].feedback)
-        updateScore(Scenario.evenements[eventIndex].avancement.echec.value)
-    }
-}
-
-const updateScore = (update) => {
-    setScore(score + update)
-}
-
-const ExecuteEventAction = (action) => {
-    loadFeedback(action.is_success)
-    sleep(3000).then(() => { 
-        if(Scenario.evenements.length-1 > eventIndex) {
-            setEventIndex(eventIndex+1) 
-        } else {
-            navigate("/emergency-bag", { state: { score: score } });
-        }
-
-     });
-
-    
-}
 
 
 return ( 
 <>
-  <div className='flex justify-center w-screen h-screen'>
-  <div className="grid grid-cols-6 grid-rows-8 gap-4 w-full h-full bg-contain bg-no-repeat bg-center	" style={{ 
-    backgroundImage: `url("/images/${background}")` 
-    }}>
+    <div className='flex justify-center w-screen h-screen'>
+        <div className="grid grid-cols-6 grid-rows-8 gap-4 w-full h-full bg-contain bg-no-repeat bg-center" 
+        style={{ 
+            backgroundImage: `url("/images/emergencyBag.png")` 
+        }}>
+
+<div className="col-span-6 col-start-1 row-start-1">
+    <div className='rounded w-100 mb-4 text-white h-50 flex justify-between'>
+        {location.state && (
+            <>
+                <div>
+                    Mission: {Scenario.nom}
+                    <br />
+                    Description: {Scenario.description}
+                </div>
+                <div>
+                    Score: {location.state.score}
+                </div>
+                <div>
+                    Gold: {location.state.gold}
+                </div>
+            </>
+        )}
+    </div>
+    <div className="col-span-6 col-start-1 row-start-2">
+        {/* lunette de vue */}
+        <div className=' w-fit fixed rounded border border-white' style={{left: "240px", top: "510px", width: "80px"}}>
+            <div className='pt-7 text-xs'>10 Gold</div>
         </div>
+        {/* lunette de soleil */}
+        <div className=' w-fit fixed rounded border border-white' style={{left: "500px", top: "510px", width: "80px"}}>
+            <div className='pt-7 text-xs'>10 Gold</div>
+        </div>
+    </div>  
+    </div>       
+
+    
+    </div>
 </div>
 
 </>
-)
-}
+)}
 
 export default EmergencyBag;

@@ -27,6 +27,18 @@ useEffect(() => {
     loadEvent()
 }, [eventIndex])
 
+useEffect(() => {
+    sleep(3000).then(() => { 
+        if(Scenario.evenements.length-1 > eventIndex) {
+            setEventIndex(eventIndex+1) 
+        } else {
+            console.log({ score: score, gold: gold })
+            navigate("/emergency-bag", { state: { score: score, gold: gold } });
+        }
+
+     });
+}, [feedback])
+
 const loadEvent = () => {
     setFeedback(null)
     setBackground(Scenario.evenements[eventIndex].image)
@@ -39,38 +51,27 @@ const loadFeedback = (is_success) => {
     if(is_success) {
         setFeedback(Scenario.evenements[eventIndex].feedback)
         updateScore(Scenario.evenements[eventIndex].avancement.succes.value)
-        console.log(eventIndex)
-        console.log(Scenario.evenements[eventIndex].avancement)
         updateGold(Scenario.evenements[eventIndex].avancement.succes.gold)
     } else {
         setFeedback(Scenario.evenements[eventIndex].feedback)
         updateScore(Scenario.evenements[eventIndex].avancement.echec.value)
         updateGold(Scenario.evenements[eventIndex].avancement.echec.gold)
-        console.log(Scenario.evenements[eventIndex].avancement.succes)
-
     }
 }
 
 const updateScore = (update) => {
+    console.log("previous score", score)
     setScore(score + update)
 }
 
 const updateGold = (update) => {
+    console.log("previous gold", gold)
+
     setGold(gold + update)
 }
 
 const ExecuteEventAction = (action) => {
     loadFeedback(action.is_success)
-    sleep(3000).then(() => { 
-        if(Scenario.evenements.length-1 > eventIndex) {
-            setEventIndex(eventIndex+1) 
-        } else {
-            navigate("/emergency-bag", { state: { score: score, gold: gold } });
-        }
-
-     });
-
-    
 }
 
 
