@@ -8,9 +8,8 @@ import {
 import Start from './pages/start/start.jsx'
 import Login from './pages/Login.jsx'
 import SelectScenario from './pages/SelectScenario.jsx'
-import Tsunami from './pages/Tsunami.jsx'
+import EmergencyBag from './pages/EmergencyBag.jsx'
 import Inondation from './pages/Inondation.jsx'
-import Seisme from './pages/Seisme.jsx'
 import Header from './layout/Header.jsx'
 
 const router = createBrowserRouter([
@@ -27,12 +26,8 @@ const router = createBrowserRouter([
       element: <SelectScenario />,
     },
     {
-      path: "/tsunami",
-      element: <Tsunami />,
-    },
-    {
-      path: "/seisme",
-      element: <Seisme />,
+      path: "/emergency-bag",
+      element: <EmergencyBag />,
     },
     {
       path: "/inondation",
@@ -43,7 +38,7 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <Header />
+    {/* <Header /> */}
     <RouterProvider router={router} />
   </StrictMode>,
 )

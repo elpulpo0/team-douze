@@ -1,16 +1,15 @@
 import { useState } from 'react'
 import '../App.css'
 
-function Tsunami() {
-  const [count, setCount] = useState(0)
+function EmergencyBag() {
 
   return (
     <>
       <div className='flex justify-center'>
-        {/* link-to-video/tsunami.mp4 */}
+        <h1>Emergency Bag</h1>
       </div>
     </>
   )
 }
 
-export default Tsunami
+export default EmergencyBag
