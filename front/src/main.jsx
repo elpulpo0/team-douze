@@ -5,7 +5,7 @@ import {
     createBrowserRouter,
     RouterProvider,
   } from "react-router-dom";
-import Start from './pages/start/start.jsx'
+import Start from './pages/Start.jsx'
 import Login from './pages/Login.jsx'
 import SelectScenario from './pages/SelectScenario.jsx'
 import Tsunami from './pages/Tsunami.jsx'

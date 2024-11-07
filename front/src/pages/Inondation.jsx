@@ -6,7 +6,7 @@ function Inondation() {
 
   return (
     <>
-      <div className='flex justify-center'>
+      <div className='flex justify-center background-container'>
         {/* link-to-video/inondation.mp4 */}
       </div>
     </>

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import Button from '../components/Button';
 
 function SelectScenario() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -23,11 +24,12 @@ function SelectScenario() {
   };
 
   return (
-    <div className="flex justify-center">
+    <div className="flex justify-center background-container">
+
       <div className="triangle_left" onClick={scrollLeft}></div>
 
       <div className="button-container">
-        <button onClick={handleButtonClick}>{buttons[currentIndex]}</button>
+        <Button label={buttons[currentIndex]} onClick={handleButtonClick} />
       </div>
 
       <div className="triangle_right" onClick={scrollRight}></div>

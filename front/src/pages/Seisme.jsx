@@ -6,7 +6,7 @@ function Tsunami() {
 
   return (
     <>
-      <div className='flex justify-center'>
+      <div className='flex justify-center background-container'>
         {/* link-to-video/tsunami.mp4 */}
       </div>
     </>
