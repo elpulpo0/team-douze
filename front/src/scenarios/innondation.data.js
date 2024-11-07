@@ -139,22 +139,22 @@ const scenario = {
     evenements: [
         {
             image: "innondation-1.jpg",
-            context: "Il fait beau, je suis dehors, maman vient de recevoir une alerte sur son téléphone...",
-            text: "Vigilance orange ? Mais il fait beau...",
+            context: "Il fait beau, je suis dehors, maman vient de recevoir une alerte sur son téléphone: Vigilance Orange \"pluie-inondations\"",
+            text: "Vigilance Orange ? Mais il fait si beau...",
             feedback:
                 "En cas de vigilance orange, il faut vite rentrer chez soi se mettre à l'abri. La météo est imprévisible, la situation peut très vite s'aggraver.",
             objectifs: [],
             actions: [
                 {
-                    label: "Je reste dehors",
+                    label: "Je reste dehors, il fait beau, pas de soucis",
                     is_succes: false,
                 },
                 {
-                    label: "Je rentre chez moi me mettre à l'abri",
+                    label: "Je rentre chez moi pour me mettre à l'abri",
                     is_succes: true,
                 },
                 {
-                    label: "je peux aller au cinéma",
+                    label: "Je vais au cinéma, au moins je serai à l'abri",
                     is_succes: false,
                 },
             ],
@@ -171,13 +171,13 @@ const scenario = {
         },
         {
             image: "innondation-2.jpg",
-            context: "Je suis chez moi, il y a de gros nuages gris dehors mais il ne pleut pas.",
-            text: "Je m'ennuie, j'irai bien jouer au foot dehors avec les copains...",
+            context: "Je suis chez moi, il y a de gros nuages gris dehors, et le vent commence un peu à souffler. Mais il ne pleut pas encore...",
+            text: "Je m'ennuie... et si j'allais jouer au foot dehors avec les copains ?",
             feedback:
                 "Même si la météo ne semble pas inquiétante, on ne prend pas de risque et on reste à l'abri chez soi. On évite de téléphoner afin de libérer les lignes pour les secours.",
             actions: [
                 {
-                    label: "J'appelle mon copain pour discuter",
+                    label: "J'appelle mon copain pour discuter et passer le temps",
                     is_succes: false,
                 },
                 {
@@ -185,7 +185,7 @@ const scenario = {
                     is_succes: false,
                 },
                 {
-                    label: "Je reste chez moi et je m'occupe autrement",
+                    label: "Je reste chez moi et trouve une autre occupation",
                     is_succes: true,
                 },
             ],
@@ -233,8 +233,8 @@ const scenario = {
         },
         {
             image: "innondation-4.jpg",
-            context: "Il y a vraiment beaucoup d'eau dehors, l'eau commence même à rentrer dans la maison...",
-            text: "C'est vraiment inquiétant !",
+            context: "Il y a vraiment beaucoup d'eau dehors, l'eau commence même à rentrer dans la maison !",
+            text: "C'est vraiment inquiétant...",
             feedback:
                 "Si l'on constate une montée des eaux, on se réfugie en étage, on ne descend pas dans les sous-sols. On évacue uniquement sur ordre des autorités avec son kit d'urgence.",
             actions: [
@@ -247,7 +247,7 @@ const scenario = {
                     is_succes: false,
                 },
                 {
-                    label: "Je monte sur la table de la cuisine",
+                    label: "Je monte sur la table à manger",
                     is_succes: false,
                 },
             ],
