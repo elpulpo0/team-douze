@@ -2,20 +2,138 @@ const scenario = {
     nom: "Innondation",
     description:
         "Scenario mettant en scene des innondation dans plusieurs lieux",
-    duree_selection_equipement: 60,
-    duree_mission: 600,
-    equipements_disponibles: [
+    objects: [
         {
             id: 1,
             label: "Bouteille d'eau",
-            description: "Utile lors d'un confinement prolongé",
             score: 10,
+            cout: 2,
+            pos: {
+                x: 0,
+                y: 0,
+            },
+            is_success: true,
         },
         {
-            id: 1,
-            label: "Chargeur",
-            description: "Utile lors d'un confinement prolongé",
+            id: 2,
+            label: "Veste",
             score: 10,
+            is_success: true,
+            cout: 2,
+            pos: {
+                x: 0,
+                y: 0,
+            },
+        },
+        {
+            id: 3,
+            label: "Lunette de soleil",
+            score: 10,
+            cout: 2,
+            is_success: false,
+            pos: {
+                x: 0,
+                y: 0,
+            },
+        },
+        {
+            id: 4,
+            label: "Lunette de vue",
+            score: 10,
+            cout: 2,
+            is_success: true,
+            pos: {
+                x: 0,
+                y: 0,
+            },
+        },
+        {
+            id: 5,
+            label: "Cle",
+            score: 10,
+            cout: 2,
+            is_success: false,
+            pos: {
+                x: 0,
+                y: 0,
+            },
+        },
+        {
+            id: 6,
+            label: "Trousse de secourt",
+            score: 10,
+            cout: 2,
+            is_success: true,
+            pos: {
+                x: 0,
+                y: 0,
+            },
+        },
+        {
+            id: 7,
+            label: "Lego",
+            score: 10,
+            cout: 2,
+            is_success: false,
+            pos: {
+                x: 0,
+                y: 0,
+            },
+        },
+        {
+            id: 8,
+            label: "XBOX",
+            score: 10,
+            cout: 2,
+            is_success: false,
+            pos: {
+                x: 0,
+                y: 0,
+            },
+        },
+        {
+            id: 9,
+            label: "Lampe torche",
+            score: 10,
+            cout: 2,
+            is_success: true,
+            pos: {
+                x: 0,
+                y: 0,
+            },
+        },
+        {
+            id: 10,
+            label: "Ballon",
+            score: 10,
+            cout: 2,
+            is_success: false,
+            pos: {
+                x: 0,
+                y: 0,
+            },
+        },
+        {
+            id: 11,
+            label: "Chips",
+            score: 10,
+            cout: 2,
+            is_success: true,
+            pos: {
+                x: 0,
+                y: 0,
+            },
+        },
+        {
+            id: 12,
+            label: "Radio",
+            score: 10,
+            cout: 2,
+            is_success: true,
+            pos: {
+                x: 0,
+                y: 0,
+            },
         },
     ],
     evenements: [
@@ -42,10 +160,12 @@ const scenario = {
             ],
             avancement: {
                 succes: {
-                    value: 10,
+                    value: 12,
+                    gold: 5,
                 },
                 echec: {
                     value: -10,
+                    gold: 5,
                 },
             },
         },
@@ -68,9 +188,11 @@ const scenario = {
             avancement: {
                 succes: {
                     value: 10,
+                    gold: 5,
                 },
                 echec: {
                     value: -10,
+                    gold: 5,
                 },
             },
         },

@@ -13,6 +13,7 @@ const [eventActions, setEventActions] = useState(null)
 const [feedback, setFeedback] = useState(null)
 const [background, setBackground] = useState(null)
 const [score, setScore] = useState(0)
+const [gold, setGold] = useState(0)
 
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
@@ -23,7 +24,6 @@ useEffect(() => {
 }, [])
 
 useEffect(() => {
-
     loadEvent()
 }, [eventIndex])
 
@@ -39,14 +39,24 @@ const loadFeedback = (is_success) => {
     if(is_success) {
         setFeedback(Scenario.evenements[eventIndex].feedback)
         updateScore(Scenario.evenements[eventIndex].avancement.succes.value)
+        console.log(eventIndex)
+        console.log(Scenario.evenements[eventIndex].avancement)
+        updateGold(Scenario.evenements[eventIndex].avancement.succes.gold)
     } else {
         setFeedback(Scenario.evenements[eventIndex].feedback)
         updateScore(Scenario.evenements[eventIndex].avancement.echec.value)
+        updateGold(Scenario.evenements[eventIndex].avancement.echec.gold)
+        console.log(Scenario.evenements[eventIndex].avancement.succes)
+
     }
 }
 
 const updateScore = (update) => {
     setScore(score + update)
+}
+
+const updateGold = (update) => {
+    setGold(gold + update)
 }
 
 const ExecuteEventAction = (action) => {
@@ -55,7 +65,7 @@ const ExecuteEventAction = (action) => {
         if(Scenario.evenements.length-1 > eventIndex) {
             setEventIndex(eventIndex+1) 
         } else {
-            navigate("/emergency-bag", { state: { score: score } });
+            navigate("/emergency-bag", { state: { score: score, gold: gold } });
         }
 
      });
@@ -79,6 +89,9 @@ return (
         </div>
         <div>
             Score: {score}
+        </div>
+        <div>
+            Gold: {gold}
         </div>
     </div>
 
