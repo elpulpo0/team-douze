@@ -78,24 +78,31 @@ const ExecuteEventAction = (action) => {
     return (
         <>
           <div className="flex items-center justify-center min-h-screen background-container">
-            <div className="py-8">
+            <div>
       
 
       
               {/* Main Content Container with larger width and height */}
               <div
-                className="relative grid grid-cols-6 grid-rows-8 gap-4 w-full max-w-6xl h-[90vh] bg-cover bg-center rounded-lg shadow-lg px-8"
+                className="relative grid grid-cols-6 grid-rows-8 gap-4 w-full max-w-6xl h-[90vh] bg-cover bg-center rounded-lg shadow-lg pb-8"
+
                 style={{ backgroundImage: `url("/images/${background}")` }}
               >
 
 
                 {/* Contexte de l'événement */}
-                <div className="col-span-6 row-start-2 flex flex-col justify-center">
+                <div className="col-span-6 row-start-1 row-span-2 flex flex-col justify-center">
                 {/* En-tête avec Mission et Score - Make sure it's above and centered */}
-                <div className="w-full mb-8 flex flex-col items-center bg-opacity-80 bg-white rounded-lg p-4 text-gray-800 shadow-md">
-                    <h2 className="font-bold text-lg text-center">Mission: {Scenario.nom}</h2>
-                    <p className="text-sm text-center">{Scenario.description}</p>
-                    <div className="font-semibold mt-2 text-center">Score: {score}</div>
+                <div className="w-full mb-7 flex justify-between bg-opacity-80 bg-white rounded-lg p-4 text-gray-800 shadow-md"
+                style={{ justifyContent: 'space-between'}}>
+                    <div className='flex-col text-start'>
+                    <h2 className="font-bold text-lg">Mission: {Scenario.nom}</h2>
+                    <p className="text-sm">{Scenario.description}</p>
+                    </div>
+                    <div className='text-end'>
+                    <p className="text-sm">Score: {score}</p>
+                    <p className="text-sm">{gold}🪙</p>
+                    </div>
                 </div>
 
                   <div className="bg-white bg-opacity-75 p-4 rounded-lg shadow-md text-black w-3/4 text-center">

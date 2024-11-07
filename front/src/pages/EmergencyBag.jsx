@@ -2,14 +2,23 @@ import { useEffect, useState } from 'react'
 import { useNavigate } from "react-router-dom";
 import '../App.css'
 import Scenario from "../scenarios/innondation.data"
-import { useLocation } from 'react-router-dom';
 import '../App.css';
 import Button_back from '../components/buttons/Button_back';
 import Button_custom from '../components/buttons/Button_custom';
 
+import { useLocation } from 'react-router-dom';
+
+
 function EmergencyBag() {
     const navigate = useNavigate();
+
+
+
     let location = useLocation();
+
+
+
+    
 
     const [bag, setBag] = useState([])
     const [gold, setGold] = useState(0)

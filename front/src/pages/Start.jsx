@@ -26,7 +26,7 @@ function start() {
   return (
     <>
       <div className="background-container">
-        <h1 className='custom_font' >Sensibilisation environnementale</h1>
+        <h1 className='custom_font' style={{marginBottom: '1rem'}}>Sensibilisation environnementale</h1>
         <div className='menu-container'>
           <div className="menu">
             <select

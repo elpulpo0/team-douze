@@ -107,8 +107,7 @@ h1 {
   background-color: #C0C78C;
   background-size: cover;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
   } 
 
   .video-container {
@@ -124,15 +123,17 @@ h1 {
   
   .menu-container {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    gap: 1em;
-    width: 35%;
-    margin-top: -2.5em;
+    gap: 0.5em;
+    margin-bottom: 10rem;
+    width: 20rem;
   }
 
   .menu {
-    width: 45%;
+    width: 100%;
   }
+
 
   .dropdown {
     width: 100%;
