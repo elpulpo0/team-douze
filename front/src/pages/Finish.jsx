@@ -1,7 +1,12 @@
 import { useState } from "react";
 import "./start/cadre.css";
+import { useLocation } from "react-router-dom";
 
 function Finish() {
+
+  const location = useLocation();
+
+  const result = location.state.score;  
   const [showChat, setShowChat] = useState(false); // État pour gérer l'affichage du chat
 
   const handleClick = () => {
@@ -14,6 +19,7 @@ function Finish() {
 
   return (
     <div className="background-container">
+      <h1 className="score">👏 {result} 🪙</h1>
       
       <div className="custom-cadre">
         <h1 className="class-titre">Qui est le meilleur ? :</h1>
@@ -23,9 +29,10 @@ function Finish() {
       </div>
       <div className="custom-cadre2">
       <h1 className="class-titre">Une petit rappel :</h1>
-      <p className="p-class">   </p>
-      <p className="p-class">  <div>🥈</div> <div>CM2-B</div> <div>990 🪙</div>  </p>
-      <p className="p-class">  <div>🥉</div> <div>CP-A</div> <div>960 🪙</div>  </p>
+      <p className="p-class1">En vigilance orange, rentrez chez vous et mettez-vous à l'abri.</p>
+      <p className="p-class1">Même si tout semble calme, restez à l'abri et évitez de téléphoner.</p>
+      <p className="p-class1">En cas d'inondation, ne descendez pas dans les sous-sols, fermez portes et fenêtres.</p>
+      <p className="p-class1">En cas de montée des eaux, montez en étage, évacuez sur ordre avec votre kit.</p>
       </div>
 
 
