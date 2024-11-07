@@ -7,7 +7,7 @@ const scenario = {
             id: 1,
             label: "Bouteille d'eau",
             score: 10,
-            cout: 2,
+            cost: 2,
             pos: {
                 x: 0,
                 y: 0,
@@ -19,7 +19,7 @@ const scenario = {
             label: "Veste",
             score: 10,
             is_success: true,
-            cout: 2,
+            cost: 2,
             pos: {
                 x: 0,
                 y: 0,
@@ -29,7 +29,7 @@ const scenario = {
             id: 3,
             label: "Lunette de soleil",
             score: 10,
-            cout: 2,
+            cost: 2,
             is_success: false,
             pos: {
                 x: 0,
@@ -40,7 +40,7 @@ const scenario = {
             id: 4,
             label: "Lunette de vue",
             score: 10,
-            cout: 2,
+            cost: 2,
             is_success: true,
             pos: {
                 x: 0,
@@ -51,7 +51,7 @@ const scenario = {
             id: 5,
             label: "Cle",
             score: 10,
-            cout: 2,
+            cost: 2,
             is_success: false,
             pos: {
                 x: 0,
@@ -62,7 +62,7 @@ const scenario = {
             id: 6,
             label: "Trousse de secourt",
             score: 10,
-            cout: 2,
+            cost: 2,
             is_success: true,
             pos: {
                 x: 0,
@@ -73,7 +73,7 @@ const scenario = {
             id: 7,
             label: "Lego",
             score: 10,
-            cout: 2,
+            cost: 2,
             is_success: false,
             pos: {
                 x: 0,
@@ -84,7 +84,7 @@ const scenario = {
             id: 8,
             label: "XBOX",
             score: 10,
-            cout: 2,
+            cost: 2,
             is_success: false,
             pos: {
                 x: 0,
@@ -95,7 +95,7 @@ const scenario = {
             id: 9,
             label: "Lampe torche",
             score: 10,
-            cout: 2,
+            cost: 2,
             is_success: true,
             pos: {
                 x: 0,
@@ -106,7 +106,7 @@ const scenario = {
             id: 10,
             label: "Ballon",
             score: 10,
-            cout: 2,
+            cost: 2,
             is_success: false,
             pos: {
                 x: 0,
@@ -117,7 +117,7 @@ const scenario = {
             id: 11,
             label: "Chips",
             score: 10,
-            cout: 2,
+            cost: 2,
             is_success: true,
             pos: {
                 x: 0,
@@ -128,7 +128,7 @@ const scenario = {
             id: 12,
             label: "Radio",
             score: 10,
-            cout: 2,
+            cost: 2,
             is_success: true,
             pos: {
                 x: 0,
