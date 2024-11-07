@@ -66,65 +66,66 @@ function Game() {
 
 
     return (
-        <>
-          <div className="flex items-center justify-center min-h-screen background-container">
-            <div className="py-8">
-      
-              {/* En-tête avec Mission et Score - Make sure it's above and centered */}
-              <div className="w-full max-w-3xl mb-8 flex flex-col items-center bg-opacity-80 bg-white rounded-lg p-4 text-gray-800 shadow-md">
-                <h2 className="font-bold text-lg text-center">Mission: {Scenario.nom}</h2>
-                <p className="text-sm text-center">{Scenario.description}</p>
-                <div className="font-semibold mt-2 text-center">Score: {score}</div>
+      <>
+        {/* Conteneur principal avec le titre en haut et le contenu centré */}
+        <div className="custom_font flex flex-col items-center justify-between min-h-screen background-container">
+          
+          {/* Titre de la mission, centré en haut */}
+          <div className="w-full max-w-3xl mb-4 flex flex-col items-center bg-opacity-80 bg-white rounded-lg p-4 text-gray-800 shadow-md">
+            <h2 className="font-bold text-lg text-center">Mission: {Scenario.nom}</h2>
+            <p className="text-sm text-center">{Scenario.description}</p>
+            <div className="font-semibold mt-2 text-center">Score: {score}</div>
+          </div>
+    
+          {/* Conteneur principal du contenu, centré au milieu, avec une hauteur ajustée */}
+          <div
+            className="relative grid grid-cols-6 grid-rows-8 gap- w-full max-w-6xl h-[80vh] bg-cover bg-center rounded-lg shadow-lg p-4"
+            style={{ backgroundImage: `url("/images/${background}")` }}
+          >
+            
+            {/* Contexte de l'événement, centré */}
+            <div className="col-span-6 row-start-1 flex justify-center">
+              <div className="bg-white bg-opacity-75 p-4 rounded-lg shadow-md text-black w-3/4 text-center">
+                {eventContext && eventContext}
               </div>
-      
-              {/* Main Content Container with larger width and height */}
-              <div
-                className="relative grid grid-cols-6 grid-rows-8 gap-4 w-full max-w-6xl h-[90vh] bg-cover bg-center rounded-lg shadow-lg p-8"
-                style={{ backgroundImage: `url("/images/${background}")` }}
-              >
-      
-                {/* Contexte de l'événement */}
-                <div className="col-span-6 row-start-2 flex justify-center">
-                  <div className="bg-white bg-opacity-75 p-4 rounded-lg shadow-md text-black w-3/4 text-center">
-                    {eventContext && eventContext}
-                  </div>
-                </div>
-      
-                {/* Nom de l'événement */}
-                <div className="col-span-3 row-start-3">
-                  <div className="bg-white bg-opacity-75 p-6 rounded-lg shadow-md text-black">
-                    <h3 className="font-bold">{eventName && eventName}</h3>
-                  </div>
-                </div>
-      
-                {/* Boutons d'actions */}
-                <div className="col-span-6 row-start-8 mt-6 flex justify-center">
-                  {eventActions && (
-                    <div className="flex gap-4 flex-wrap justify-center items-center">
-                      {eventActions.map((action, index) => (
-                        <Button_game
-                          label={action.label}
-                          key={index}
-                          className="text-white bg-blue-500 hover:bg-blue-600 rounded-md px-4 py-2"
-                          onClick={() => ExecuteEventAction(action)}
-                        />
-                      ))}
-                    </div>
-                  )}
-                </div>
+            </div>
+    
+            {/* Nom de l'événement */}
+            <div className="col-span-3 row-start-3">
+              <div className="bg-white bg-opacity-75 p-6 rounded-lg shadow-md text-black">
+                <h3 className="font-bold">{eventName && eventName}</h3>
               </div>
-      
-              {/* Feedback de l'utilisateur */}
-              {feedback && (
-                <div className="absolute left-4 bottom-4 flex items-center space-x-2 p-4 bg-white bg-opacity-80 rounded-lg shadow-md">
-                  <img src="/images/pompier_valid.png" alt="Validation" className="w-16 h-16 object-contain" />
-                  <p className="text-black">{feedback}</p>
+            </div>
+    
+            {/* Boutons d'actions, centrés en bas */}
+            <div className="col-span-6 row-start-8 mt-4 flex justify-center">
+              {eventActions && (
+                <div className="flex gap-4 flex-wrap justify-center items-center">
+                  {eventActions.map((action, index) => (
+                    <Button_game
+                      label={action.label}
+                      key={index}
+                      className="text-white bg-blue-500 hover:bg-blue-600 rounded-md px-4 py-2"
+                      onClick={() => ExecuteEventAction(action)}
+                    />
+                  ))}
                 </div>
               )}
             </div>
           </div>
-        </>
-      )
+    
+          {/* Feedback utilisateur, positionné en bas à gauche */}
+          {feedback && (
+            <div className="absolute left-4 bottom-4 flex items-center space-x-2 p-4 bg-white bg-opacity-80 rounded-lg shadow-md">
+              <img src="/images/pompier_valid.png" alt="Validation" className="w-16 h-16 object-contain" />
+              <p className="text-black">{feedback}</p>
+            </div>
+          )}
+        </div>
+      </>
+    );
+    
+    
       
       
 
