@@ -202,6 +202,7 @@ video {
 
 
 .chat:hover {
+    border-color: #000;
     transform: translate(-50%, -0.2vw);
 }
 
