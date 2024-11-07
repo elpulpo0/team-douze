@@ -49,3 +49,9 @@
    .button_home {
     margin-top : 3vw;
   }
+
+  .button_start {
+    position: absolute;
+    top: 90.5vh;
+    align-content: center;
+  }

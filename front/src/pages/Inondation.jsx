@@ -1,12 +1,17 @@
-import { useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import '../App.css';
 import Button_back from '../components/Button_back';
+import Button_custom from '../components/Button_custom';
 
 function Inondation() {
     const navigate = useNavigate();
 
-    const backHome = (e) => {
+    const back = (e) => {
+        e.preventDefault();
+        navigate('/selectScenario');
+    };
+
+    const startGame = (e) => {
         e.preventDefault();
         navigate('/');
     };
@@ -23,10 +28,13 @@ function Inondation() {
                         <source src="./videos/inondation.mp4" type="video/mp4" />
                         Your browser does not support the video tag.
                     </video>
+                    <div className="button-container button_start">
+                        <Button_custom label="Lancez le scénario" onClick={startGame} />
+                    </div>
                 </div>
-            </div>
+            </div >
             <div className="button-container_back">
-                <Button_back label="Retour" onClick={backHome} />
+                <Button_back label="Retour" onClick={back} />
             </div>
         </>
     );
