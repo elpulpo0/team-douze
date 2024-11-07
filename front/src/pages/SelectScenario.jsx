@@ -1,5 +1,8 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import Button_custom from '../components/Button_custom';
+import Button_back from '../components/Button_back';
+
 
 function SelectScenario() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -17,19 +20,29 @@ function SelectScenario() {
     );
   };
 
+  const backHome = (e) => {
+    e.preventDefault();
+    navigate('/');
+  };
+
   const handleButtonClick = () => {
     const routes = ["/inondation", "/seisme", "/tsunami"];
     navigate(routes[currentIndex]);
   };
 
   return (
-    <div className="flex justify-center">
+    <div className="flex justify-center background-container">
+
       <div className="triangle_left" onClick={scrollLeft}></div>
 
       <div className="button-container">
-        <button onClick={handleButtonClick}>{buttons[currentIndex]}</button>
+        <Button_custom label={buttons[currentIndex]} onClick={handleButtonClick} />
       </div>
 
+      <div className="button-container_back">
+      <Button_back label= "Retour" onClick={backHome}/>
+      </div>
+      
       <div className="triangle_right" onClick={scrollRight}></div>
     </div>
   );
