@@ -1,0 +1,46 @@
+
+
+.button-container_game {
+    display: flex;
+    overflow-x: auto;
+    gap: 1rem;
+    padding: 1rem;
+    align-items: center;
+    position: absolute;
+    top: 90vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+  }
+
+.button_game {
+    background-color: lightcoral;
+    border-width: 3px;
+    border-color: black;
+    padding: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    height: auto;
+    width: auto;
+    border-radius: 1rem;
+    color: white;
+    cursor: pointer;
+   }
+   
+   .button_game:active {
+    color: lightcoral;
+    box-shadow: 0 0.2rem #dfd9d9;
+    transform: translateY(0.2rem);
+    border-color: black;
+   }
+   
+   .button_game:hover:not(:disabled) {
+    background: white;
+    color: lightcoral;
+    text-shadow: 0 0.1rem #bcb4b4;
+    border-color: black;
+   }
+   
+   .button_game:disabled {
+    cursor: auto;
+    color: grey;
+   }

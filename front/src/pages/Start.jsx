@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
-import Button_custom from '../components/Button_custom';
+import Button_custom from '../components/buttons/Button_custom';
 
 function start() {  
   const navigate = useNavigate();
