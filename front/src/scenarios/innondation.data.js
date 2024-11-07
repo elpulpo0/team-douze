@@ -1,7 +1,7 @@
 const scenario = {
-    nom: "Innondation",
+    nom: "Inondation",
     description:
-        "Scenario mettant en scene des innondation dans plusieurs lieux",
+        "Scenario mettant en scene des inondations dans plusieurs lieux",
     objects: [
         {
             id: 1,
@@ -139,22 +139,22 @@ const scenario = {
     evenements: [
         {
             image: "innondation-1.jpg",
-            context: "Maman m'a dit alerte orange !!",
-            text: "Tu a oublié ta console dans la voiture",
+            context: "Il fait beau, je suis dehors, maman vient de recevoir une alerte sur son téléphone: Vigilance Orange \"pluie-inondations\"",
+            text: "Vigilance Orange ? Mais il fait si beau...",
             feedback:
-                "Il est très risqué de se rendre dans un parking lors d'un evenement à risque",
+                "En cas de vigilance orange, il faut vite rentrer chez soi se mettre à l'abri. La météo est imprévisible, la situation peut très vite s'aggraver.",
             objectifs: [],
             actions: [
                 {
-                    label: "Allez la chercher",
+                    label: "Je reste dehors, il fait beau, pas de soucis",
                     is_succes: false,
                 },
                 {
-                    label: "Demander à mes parents",
+                    label: "Je rentre chez moi pour me mettre à l'abri",
                     is_succes: true,
                 },
                 {
-                    label: "Demander au president",
+                    label: "Je vais au cinéma, au moins je serai à l'abri",
                     is_succes: false,
                 },
             ],
@@ -171,17 +171,83 @@ const scenario = {
         },
         {
             image: "innondation-2.jpg",
-            context: "Maman m'a dit alerte orange !!",
-            text: "Tu entend les fenetres claquer",
+            context: "Je suis chez moi, il y a de gros nuages gris dehors, et le vent commence un peu à souffler. Mais il ne pleut pas encore...",
+            text: "Je m'ennuie... et si j'allais jouer au foot dehors avec les copains ?",
             feedback:
-                "Il est très risqué de se rendre dans un parking lors d'un evenement à risque",
+                "Même si la météo ne semble pas inquiétante, on ne prend pas de risque et on reste à l'abri chez soi. On évite de téléphoner afin de libérer les lignes pour les secours.",
             actions: [
                 {
-                    label: "aller les fermer",
+                    label: "J'appelle mon copain pour discuter et passer le temps",
+                    is_succes: false,
+                },
+                {
+                    label: "Je vais jouer dehors tant qu'il ne pleut pas encore",
+                    is_succes: false,
+                },
+                {
+                    label: "Je reste chez moi et trouve une autre occupation",
+                    is_succes: true,
+                },
+            ],
+            avancement: {
+                succes: {
+                    value: 10,
+                    gold: 5,
+                },
+                echec: {
+                    value: -10,
+                    gold: 5,
+                },
+            },
+        },
+        {
+            image: "innondation-3.jpg",
+            context: "Il pleut très fort dehors, je décide de jouer à la console.",
+            text: "Mince ! La console est restée dans la voiture au parking !",
+            feedback:
+                "En cas de risque d'inondations, il ne faut surtout pas descendre dans les sous-sols ou les parkings souterrains. On ferme bien les portes et fenêtres et on écoute la radio pour se tenir informé auprès des autorités.",
+            actions: [
+                {
+                    label: "Je descend vite au parking chercher ma console",
+                    is_succes: false,
+                },
+                {
+                    label: "Je reste chez moi et j'écoute la radio",
                     is_succes: true,
                 },
                 {
-                    label: "les laisser ouvert",
+                    label: "J'ouvre la fenêtre pour regarder la pluie",
+                    is_succes: false,
+                },
+            ],
+            avancement: {
+                succes: {
+                    value: 10,
+                    gold: 5,
+                },
+                echec: {
+                    value: -10,
+                    gold: 5,
+                },
+            },
+        },
+        {
+            image: "innondation-4.jpg",
+            context: "Il y a vraiment beaucoup d'eau dehors, l'eau commence même à rentrer dans la maison !",
+            text: "C'est vraiment inquiétant...",
+            feedback:
+                "Si l'on constate une montée des eaux, on se réfugie en étage, on ne descend pas dans les sous-sols. On évacue uniquement sur ordre des autorités avec son kit d'urgence.",
+            actions: [
+                {
+                    label: "Je monte à l'étage",
+                    is_succes: true,
+                },
+                {
+                    label: "Je n'ai pas de soucis à me faire, je suis à l'abri chez moi",
+                    is_succes: false,
+                },
+                {
+                    label: "Je monte sur la table à manger",
                     is_succes: false,
                 },
             ],
