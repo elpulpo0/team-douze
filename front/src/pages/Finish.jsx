@@ -24,6 +24,7 @@ function Finish() {
   }, []);
 
   return (
+    <div className="background-container">
     <div className="finish-page">
       <h2>Congratulations! Here are your badges:</h2>
       <div className="badge-container">
@@ -31,6 +32,7 @@ function Finish() {
           <Badge key={badge.id} {...badge} />
         ))}
       </div>
+    </div>
     </div>
   );
 }

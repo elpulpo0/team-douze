@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import './Badge.css';
+import './badge.css';
 
 function Badge({ name, icon, isEarned, description, isAnimated }) {
   const [isAnimating, setIsAnimating] = useState(isAnimated);
