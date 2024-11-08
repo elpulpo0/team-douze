@@ -15,6 +15,7 @@ function Game() {
     const [background, setBackground] = useState(null);
     const [score, setScore] = useState(0);
     const [gold, setGold] = useState(0);
+    const [action, setAction] = useState(null)
     const [collectedObjects, setCollectedObjects] = useState([]);  // Ajout pour les objets collectés
 
     // Fonction de pause
@@ -106,6 +107,7 @@ function Game() {
     // Exécution de l'action de l'événement
     const ExecuteEventAction = (action) => {
         loadFeedback(action.is_succes);
+        setAction(action)
     };
 
     return (

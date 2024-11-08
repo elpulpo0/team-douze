@@ -26,7 +26,15 @@
     color: white;
     cursor: pointer;
    }
-   
+
+   .button_game_valid {
+    background-color: green!important;
+   }
+
+   .button_game_invalid {
+    background-color: red!important;
+   }
+
    .button_game:active {
     color: lightcoral;
     box-shadow: 0 0.2rem #dfd9d9;
