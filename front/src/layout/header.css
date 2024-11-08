@@ -7,7 +7,7 @@ body.modal-open {
     padding: 20px 70px;
     display: flex;
     align-items: center;
-    background: #000000;
+    /* background: #000000; */
 }
 
 nav {
