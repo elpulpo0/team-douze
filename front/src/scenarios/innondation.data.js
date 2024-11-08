@@ -161,11 +161,11 @@ const scenario = {
             ],
             avancement: {
                 succes: {
-                    value: 12,
+                    value: 27,
                     gold: 5,
                 },
                 echec: {
-                    value: -2,
+                    value: -17,
                     gold: 0,
                 },
             },
@@ -193,11 +193,11 @@ const scenario = {
             ],
             avancement: {
                 succes: {
-                    value: 10,
+                    value: 16,
                     gold: 5,
                 },
                 echec: {
-                    value: -1,
+                    value: -8,
                     gold: 0,
                 },
             },
@@ -225,11 +225,11 @@ const scenario = {
             ],
             avancement: {
                 succes: {
-                    value: 14,
+                    value: 38,
                     gold: 5,
                 },
                 echec: {
-                    value: -2,
+                    value: -21,
                     gold: 0,
                 },
             },
@@ -257,11 +257,11 @@ const scenario = {
             ],
             avancement: {
                 succes: {
-                    value: 15,
+                    value: 25,
                     gold: 8,
                 },
                 echec: {
-                    value: -3,
+                    value: -15,
                     gold: 0,
                 },
             },
