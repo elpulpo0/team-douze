@@ -99,7 +99,7 @@
 
 .custom-cadre {
     position: absolute;
-    top : 28vh;
+    top : 32vh;
     right: 10vw;
     width: 36vw;
     height: 55vh;
@@ -116,7 +116,7 @@
 
 .custom-cadre2 {
     position: absolute;
-    top : 28vh;
+    top : 32vh;
     left: 10vw;
     width: 36vw;
     height: 55vh;
@@ -275,7 +275,7 @@ video {
 }
 
 .score{
-    font-size: 4vw ;
+    font-size: 3vw ;
     border-radius: 20px;
     position: fixed;
     top: 1vw;

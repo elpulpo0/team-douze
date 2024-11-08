@@ -49,8 +49,8 @@ function Finish() {
         ))}
       </div>
     </div>
-      <h1 className="score">👏 {result} points</h1>
-      <h2 className="score">Félicitation!</h2>
+      <h1 className="score">👏 Félicitation! Score: {result} points</h1>
+      {/* <div className="score">Félicitation!</div> */}
       
       <div className="custom-cadre">
         <h1 className="class-titre">Qui est le meilleur ?</h1>

@@ -119,8 +119,8 @@ function Game() {
                         <p className="text-md">{scenario.description}</p>
                     </div>
                     <div className="flex-1 text-right">
-                        <div className="font-semibold text-lg">Score: {score}</div>
-                        <div className="font-semibold text-lg">Gold: {gold}</div>
+                        <div className="font-semibold text-lg">Score: {score} pts</div>
+                        <div className="font-semibold text-lg">Gold: {gold} 🪙</div>
                     </div>
                 </div>
 
