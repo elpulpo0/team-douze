@@ -52,7 +52,7 @@ function EmergencyBag() {
 
 return ( 
 <>
-    <div className='flex justify-center w-screen h-screen'>
+    <div className='background-container flex justify-center w-screen h-screen'>
         <div className="flex flex-col w-full h-full bg-contain bg-no-repeat bg-center" 
             style={{ 
                 backgroundImage: `url("/images/emergencyBag.png")`,
@@ -63,9 +63,10 @@ return (
                 <div className='rounded w-100 mb-4 text-white h-50 flex justify-between'>
                     {location.state && (
                         <>
-                            <h1 text-3xl bold>
-                                RECUPERE LES OBJETS QUE TU PENSES UTILES EN CAS D'INNONDATION
+                           <h1 style={{ fontSize: '1.5vw' }}>
+                        RÉCUPÈRE LES OBJETS QUE TU PENSES UTILES EN CAS D'INONDATION
                             </h1>
+
                             
                         </>
                     )}
