@@ -53,7 +53,7 @@ function EmergencyBag() {
 return ( 
 <>
     <div className='background-container flex justify-center w-screen h-screen'>
-        <div className="flex flex-col w-full h-full bg-contain bg-no-repeat bg-center" 
+        <div className="flex_custom flex-col w-full h-full bg-contain bg-no-repeat bg-center" 
             style={{ 
                 backgroundImage: `url("/images/emergencyBag.png")`,
                 justifyContent: 'space-between' 

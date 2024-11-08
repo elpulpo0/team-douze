@@ -146,7 +146,7 @@ function Game() {
                     </div>
 
                     {/* Boutons d'actions */}
-                    <div className="col-span-6 row-start-8 mt-4 flex justify-center">
+                    <div className="col-span-6 row-start-8 mt-4 flex_custom justify-center">
                         {eventActions && (
                             <div className="flex flex-wrap gap-12 justify-between items-center w-full">
                                 {eventActions.map((action, index) => (
