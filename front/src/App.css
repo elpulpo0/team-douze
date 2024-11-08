@@ -204,4 +204,7 @@ h1 {
     right: -45px;
   }
   
-  
+  .titre_selection {
+    position: absolute;
+    top: 20vh;
+  }

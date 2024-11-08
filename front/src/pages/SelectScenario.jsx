@@ -33,6 +33,11 @@ function SelectScenario() {
   return (
     <div className="flex justify-center background-container">
 
+<h1 className="titre_selection">
+  Choisissez le thème du scénario
+</h1>
+
+
       <div className="triangle_left" onClick={scrollLeft}></div>
 
       <div className="button-container">
