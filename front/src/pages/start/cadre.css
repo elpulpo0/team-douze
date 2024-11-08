@@ -99,10 +99,10 @@
 
 .custom-cadre {
     position: absolute;
-    top : 32vh;
+    top : 28vh;
     right: 10vw;
-    width: 36vw;
-    height: 55vh;
+    width: 37vw;
+    height: 57vh;
     margin: 2vw auto;
     background-color: rgba(0, 0, 0, 0.35);
     border: 2px solid #FDCDBE; ;
@@ -116,10 +116,10 @@
 
 .custom-cadre2 {
     position: absolute;
-    top : 32vh;
+    top : 28vh;
     left: 10vw;
-    width: 36vw;
-    height: 55vh;
+    width: 37vw;
+    height: 57vh;
     margin: 2vw auto;
     background-color: rgba(0, 0, 0, 0.35);
     border: 2px solid #FDCDBE; ;

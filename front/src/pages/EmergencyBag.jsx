@@ -63,10 +63,15 @@ return (
                 <div className='rounded w-100 mb-4 text-white h-50 flex justify-between'>
                     {location.state && (
                         <>
-                           <h1 style={{ fontSize: '1.5vw' }}>
-                        RÉCUPÈRE LES OBJETS QUE TU PENSES UTILES EN CAS D'INONDATION
+                        <div className='flex flex-col' style={{alignItems: 'center'}}>
+                            <h1 style={{ fontSize: '1.5vw' }}>
+                                RÉCUPÈRE LES OBJETS QUE TU PENSES UTILES EN CAS D'INONDATION
                             </h1>
-
+                            <div className='text-7xl mt-5 font-bold bg-white bg-opacity-50 p-3 w-fit rounded'>
+                                <span className='text-black'>{gold}🪙</span>
+                            </div>
+                        </div>
+      
                             
                         </>
                     )}
@@ -96,108 +101,108 @@ return (
     <div>
         {/* lunette de vue */}
         <div 
-            className={`w-fit fixed rounded border border-white 
+            className={`w-fit fixed rounded border-4
                 ${bag.find(item => item.id === 4) ? (bag.find(item => item.id === 4).is_success ? 'border-green-500 text-green-500' : 'border-red-500 text-red-500') : 'border-white'}
             `}
             style={{left: "240px", top: "510px", width: "80px"}} 
             onClick={() => addToBag(Scenario.objects[3])}>
-            <div className='pt-7 text-md'
+            <div className='font-extrabold pt-7 text-md font-extrabold'
         >10 🪙</div>
         </div>
         {/* lunette de soleil */}
         <div 
-            className={`w-fit fixed rounded border border-white 
+            className={`w-fit fixed rounded border-4 
                 ${bag.find(item => item.id === 3) ? (bag.find(item => item.id === 3).is_success ? 'border-green-500 text-green-500' : 'border-red-500 text-red-500') : 'border-white'}
             `}            style={{left: "500px", top: "510px", width: "80px"}}
             onClick={() => addToBag(Scenario.objects[2])}>
-            <div className='pt-7 text-md'>10 🪙</div>
+            <div className='font-extrabold pt-7 text-md font-extrabold'>10 🪙</div>
         </div>
         {/* XBOX */}
         <div 
-            className={`w-fit fixed rounded border border-white 
+            className={`w-fit fixed rounded border-4 
                 ${bag.find(item => item.id === 8) ? (bag.find(item => item.id === 8).is_success ? 'border-green-500 text-green-500' : 'border-red-500 text-red-500') : 'border-white'}
             `}            onClick={() => addToBag(Scenario.objects[7])}
             style={{left: "390px", top: "610px", width: "120px"}}
             >
-            <div className='text-md' style={{paddingTop: "100px"}}>10 🪙</div>
+            <div className='text-md font-extrabold' style={{paddingTop: "100px"}}>10 🪙</div>
         </div>
         {/* LEGO */}
         <div 
-            className={`w-fit fixed rounded border border-white 
+            className={`w-fit fixed rounded border-4 
                 ${bag.find(item => item.id === 7) ? (bag.find(item => item.id === 7).is_success ? 'border-green-500 text-green-500' : 'border-red-500 text-red-500') : 'border-white'}
             `}            onClick={() => addToBag(Scenario.objects[6])}
             style={{left: "300px", top: "750px", width: "200px"}}
             >
-            <div className='text-md' style={{paddingTop: "110px"}}>10 🪙</div>
+            <div className='text-md font-extrabold' style={{paddingTop: "110px"}}>10 🪙</div>
         </div>
         {/* BALLON */}
         <div 
-            className={`w-fit fixed rounded border border-white 
+            className={`w-fit fixed rounded border-4 
                 ${bag.find(item => item.id === 10) ? (bag.find(item => item.id === 10).is_success ? 'border-green-500 text-green-500' : 'border-red-500 text-red-500') : 'border-white'}
             `}            onClick={() => addToBag(Scenario.objects[9])}
             style={{left: "550px", top: "750px", width: "100px"}}
             >
-            <div className='text-md' style={{paddingTop: "110px"}}>10 🪙</div>
+            <div className='text-md font-extrabold' style={{paddingTop: "110px"}}>10 🪙</div>
         </div>
         {/* LAMPE TORCHE */}
         <div 
-            className={`w-fit fixed rounded border border-white 
+            className={`w-fit fixed rounded border-4 
                 ${bag.find(item => item.id === 9) ? (bag.find(item => item.id === 9).is_success ? 'border-green-500 text-green-500' : 'border-red-500 text-red-500') : 'border-white'}
             `}            onClick={() => addToBag(Scenario.objects[8])}
             style={{left: "700px", top: "650px", width: "150px"}}
         >
-            <div className='text-md' style={{paddingTop: "70px"}}>10 🪙</div>
+            <div className='text-md font-extrabold' style={{paddingTop: "70px"}}>10 🪙</div>
         </div>
         {/* TROUSSE DE SECOURT */}
         <div 
-            className={`w-fit fixed rounded border border-white 
+            className={`w-fit fixed rounded border-4 
                 ${bag.find(item => item.id === 6) ? (bag.find(item => item.id === 6).is_success ? 'border-green-500 text-green-500' : 'border-red-500 text-red-500') : 'border-white'}
             `}            onClick={() => addToBag(Scenario.objects[5])}
             style={{left: "900px", top: "620px", width: "150px"}}
         >
-            <div className='text-md' style={{paddingTop: "80px"}}>10 🪙</div>
+            <div className='text-md font-extrabold' style={{paddingTop: "80px"}}>10 🪙</div>
         </div>
         {/* VESTE */}
         <div 
-            className={`w-fit fixed rounded border border-white 
+            className={`w-fit fixed rounded border-4 
                 ${bag.find(item => item.id === 2) ? (bag.find(item => item.id === 2).is_success ? 'border-green-500 text-green-500' : 'border-red-500 text-red-500') : 'border-white'}
             `}            onClick={() => addToBag(Scenario.objects[1])}
             style={{left: "1030px", top: "350px", width: "100px"}}
         >
-            <div className='text-md' style={{paddingTop: "230px"}}>10 🪙</div>
+            <div className='text-md font-extrabold' style={{paddingTop: "230px"}}>10 🪙</div>
         </div>
         {/* CLE */}
         <div 
-            className={`w-fit fixed rounded border border-white 
+            className={`w-fit fixed rounded border-4 
                 ${bag.find(item => item.id === 5) ? (bag.find(item => item.id === 5).is_success ? 'border-green-500 text-green-500' : 'border-red-500 text-red-500') : 'border-white'}
             `}            onClick={() => addToBag(Scenario.objects[4])}
             style={{left: "1115px", top: "220px", width: "100px"}}>
-            <div className='text-md' style={{paddingTop: "100px"}}>10 🪙</div>
+            <div className='text-md font-extrabold' style={{paddingTop: "100px"}}>10 🪙</div>
         </div>
         {/* BOUTEILLE EAU */}
         <div 
-            className={`w-fit fixed rounded border border-white 
+            className={`w-fit fixed rounded border-4 
                 ${bag.find(item => item.id === 1) ? (bag.find(item => item.id === 1).is_success ? 'border-green-500 text-green-500' : 'border-red-500 text-red-500') : 'border-white'}
             `}            onClick={() => addToBag(Scenario.objects[0])}
             style={{left: "1255px", top: "490px", width: "100px"}}>
-            <div className='text-md' style={{paddingTop: "100px"}}>10 🪙</div>
+            <div className='text-md font-extrabold' style={{paddingTop: "100px"}}>10 🪙</div>
         </div>
         {/* CHIPS */}
         <div 
-            className={`w-fit fixed rounded border border-white 
+            className={`w-fit fixed rounded border-4 
                 ${bag.find(item => item.id === 11) ? (bag.find(item => item.id === 11).is_success ? 'border-green-500 text-green-500' : 'border-red-500 text-red-500') : 'border-white'}
             `}            onClick={() => addToBag(Scenario.objects[10])} 
             style={{left: "1280px", top: "620px", width: "100px"}}>
-            <div className='text-md' style={{paddingTop: "70px"}}>10 🪙</div>
+            <div className='text-md font-extrabold' style={{paddingTop: "70px"}}>10 🪙</div>
         </div>
         {/* RADIO */}
         <div 
-            className={`w-fit fixed rounded border border-white 
+            className={`w-fit fixed rounded border-4 
                 ${bag.find(item => item.id === 12) ? (bag.find(item => item.id === 12).is_success ? 'border-green-500 text-green-500' : 'border-red-500 text-red-500') : 'border-white'}
             `}            onClick={() => addToBag(Scenario.objects[11])}
             style={{left: "1390px", top: "580px", width: "100px"}}
             >
-            <div className='text-md' style={{paddingTop: "80px"}}>10 🪙</div>
+            <div className='text-md font-extrabold' style={{paddingTop: "80px"}}>10 🪙</div>
         </div>
     </div>
 
