@@ -10,12 +10,12 @@ function start() {
     navigate('/selectScenario');
   };
 
-  const ecoles = ['Ecole 1', 'Ecole 2', 'Ecole 3', 'Ecole 4'];
+  const ecoles = ['Ecole Marie Curie', 'Ecole Jules Ferry', 'Ecole Jean Moulin', 'Ecole Victor Hugo'];
   const classesOptions = {
-    'Ecole 1': ['Classe 1A', 'Classe 1B', 'Classe 1C', 'Classe 1D'],
-    'Ecole 2': ['Classe 2A', 'Classe 2B', 'Classe 2C', 'Classe 2D'],
-    'Ecole 3': ['Classe 3A', 'Classe 3B', 'Classe 3C', 'Classe 3D'],
-    'Ecole 4': ['Classe 4A', 'Classe 4B', 'Classe 4C', 'Classe 4D'],
+    'Ecole Marie Curie': ['CP A1', 'CE2 B1', 'CM1 C1', 'CM2 D1'],
+    'Ecole Jules Ferry': ['CP A2', 'CE2 B2', 'CM1 C2', 'CM2 D2'],
+    'Ecole Jean Moulin': ['CP A3', 'CE2 B3', 'CM1 C3', 'CM2 D3'],
+    'Ecole Victor Hugo': ['CP A4', 'CE2 B4', 'CM1 C4', 'CM2 D4'],
   };
 
   const [selectedEcole, setSelectedEcole] = useState('');

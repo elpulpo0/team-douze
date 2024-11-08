@@ -13,12 +13,8 @@ function EmergencyBag() {
     const navigate = useNavigate();
 
 
-
     let location = useLocation();
 
-
-
-    
 
     const [bag, setBag] = useState([])
     const [gold, setGold] = useState(0)
