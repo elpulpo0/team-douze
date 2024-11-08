@@ -138,7 +138,7 @@ function Game() {
                     {/* Bulle de pensée pour l'événement */}
                     <div className="col-span-3 row-start-3">
                         <div className="bulle-pensee">
-                            <h3 className="font-bold">{eventName && eventName}</h3>
+                            <h3 className="font-bold text-black-600">{eventName && eventName}</h3>
                             <div className="mini-bulle mini-bulle1"></div>
                             <div className="mini-bulle mini-bulle2"></div>
                             <div className="mini-bulle mini-bulle3"></div>
