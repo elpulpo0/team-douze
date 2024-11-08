@@ -63,21 +63,13 @@ return (
                 <div className='rounded w-100 mb-4 text-white h-50 flex justify-between'>
                     {location.state && (
                         <>
-                            <div>
-                                Mission: {Scenario.nom}
-                                <br />
-                                Description: {Scenario.description}
-                            </div>
-                            <div>
-                                Score: {score}
-                            </div>
-                            <div>
-                                Gold: {gold}
-                            </div>
+                            <h1 text-3xl bold>
+                                RECUPERE LES OBJETS QUE TU PENSES UTILES EN CAS D'INNONDATION
+                            </h1>
+                            
                         </>
                     )}
                 </div>
-                <span className='text-7xl bold'>{gold}🪙</span>
             </div>
 
             <div className='rounded bg-gray-400 flex flex-row mb-6'>
