@@ -49,16 +49,17 @@ function Finish() {
         ))}
       </div>
     </div>
-      <h1 className="score">👏 {result} 🪙</h1>
+      <h1 className="score">👏 {result} points</h1>
+      <h2 className="score">Félicitation!</h2>
       
       <div className="custom-cadre">
-        <h1 className="class-titre">Qui est le meilleur ? :</h1>
-        <p className="p-class">  <div>🥇</div> <div>CM1-A</div> <div>1200 🪙</div>  </p>
-        <p className="p-class">  <div>🥈</div> <div>CM2-B</div> <div>990 🪙</div>  </p>
-        <p className="p-class">  <div>🥉</div> <div>CP-A</div> <div>960 🪙</div>  </p>
+        <h1 className="class-titre">Qui est le meilleur ?</h1>
+        <p className="p-class">  <div>🥇</div> <div>CM1-A</div> <div>1200</div>  </p>
+        <p className="p-class">  <div>🥈</div> <div>CM2-B</div> <div>990</div>  </p>
+        <p className="p-class">  <div>🥉</div> <div>CP-A</div> <div>960</div>  </p>
       </div>
       <div className="custom-cadre2">
-      <h1 className="class-titre">Une petit rappel :</h1>
+      <h1 className="class-titre">Un petit rappel</h1>
       <p className="p-class1">En vigilance orange, rentrez chez vous et mettez-vous à l'abri.</p>
       <p className="p-class1">Même si tout semble calme, restez à l'abri et évitez de téléphoner.</p>
       <p className="p-class1">En cas d'inondation, ne descendez pas dans les sous-sols, fermez portes et fenêtres.</p>

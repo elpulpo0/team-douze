@@ -48,6 +48,8 @@
 
    .button_home {
     margin-top : 3vw;
+    position: absolute;
+    top: 75vh;
   }
 
   .button_start {

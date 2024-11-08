@@ -25,9 +25,17 @@ function start() {
 
   return (
     <>
-      <div className="background-container">
-        <h1 className='custom_font' style={{marginBottom: '0rem'}}>MISSION SAUVETAGE</h1>
-        <span className='custom_font text-5xl main-sub-title' style={{marginBottom: '3rem'}}>Sensibilisation aux risques majeurs</span>
+      <div className="custom_font flex flex-col items-center justify-between min-h-screen background-container">
+        <div className="flex items-center titre">
+
+          {/* Titre à côté du logo */}
+          <h1>
+            MISSION SAUVETAGE
+          </h1>
+          {/* Logo à gauche */}
+          <img src="/images/Logo.png" alt="Logo" className="w-40 h-40 mr-2" />
+        </div>
+        <span className='custom_font text-5xl main-sub-title' style={{ marginBottom: '3rem' }}>Sensibilisation aux risques majeurs</span>
         <div className='menu-container'>
           <div className="menu">
             <select
