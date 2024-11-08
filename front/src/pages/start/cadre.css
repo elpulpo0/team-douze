@@ -189,22 +189,33 @@ video {
 }
 
 .chat {
-    position: absolute;
-    top: 90vh;
     font-size: 1.5vw;
     padding: 1vw;
     border-radius: 20px;
+    position: fixed;
+    background-color: #FFA69E !important;
+    bottom: 1vw;
+    left: 50%;
+    transform: translateX(-50%); 
+    display: flex;
 }
 
+
 .chat:hover {
-    transform: translateY(-0.2vw);
+    border-color: #000;
+    transform: translate(-50%, -0.2vw);
 }
 
 
 .chat2 {
-    position: absolute;
-    top: 42vh;
+    transform: translateX(-50%);
+    position: fixed;
+    bottom: 1vw;
+    left: 50%;
+    transform: translateX(-50%); 
+    display: flex;
 }
+
 
 .ListPlacement {
     position: absolute;
@@ -249,3 +260,26 @@ video {
     padding: 20px;
 }
 
+.p-class1 {
+    margin: 2px;
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #FDCDBE !important;
+    border-radius: 30px;
+    background-color: rgba(54, 54, 54, 0.616);
+    color: #FAF3DD;
+    font-weight: 550;
+    font-size: 1.1vw;
+    padding: 20px;
+}
+
+.score{
+    font-size: 4vw ;
+    border-radius: 20px;
+    position: fixed;
+    top: 1vw;
+    left: 50%;
+    transform: translateX(-54%); 
+    display: flex;
+}

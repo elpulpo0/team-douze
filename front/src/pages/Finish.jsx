@@ -1,19 +1,55 @@
-import { useState } from "react";
-import "./start/cadre.css";
+import "./start/cadre.css"
+import Badge from "../components/badge"
+import React, { useState, useEffect } from 'react';
+import { useLocation } from "react-router-dom";
 
 function Finish() {
+
+  const location = useLocation();
+
+  
+  const result = location.state && location.state.score !== 0 ? location.state.score : 0;
+
   const [showChat, setShowChat] = useState(false); // État pour gérer l'affichage du chat
 
   const handleClick = () => {
-    setShowChat(true); // Affiche le chat
+    setShowChat(true);
   };
 
   const handleCloseChat = () => {
-    setShowChat(false); // Cache le chat
+    setShowChat(false);
   };
+
+
+  const [badges, setBadges] = useState([
+    { id: 1, icon: '/images/flame.png', isEarned: true, description: 'Pour avoir bravé et éteint un incendie menaçant, sauvant tout sur son passage', isAnimated: false },
+    { id: 2, icon: '/images/Flooding_rain.png', isEarned: false, description: 'Décerné à celui qui a protégé les terres inondées', isAnimated: true },
+    { id: 3, icon: '/images/Earth.png', isEarned: false, description: 'Awarded for defeating Lt. Surge.', isAnimated: false },
+  ]);
+
+  // Simulate earning the third badge
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setBadges((prevBadges) =>
+        prevBadges.map((badge) =>
+          badge.id === 2 ? { ...badge, isEarned: true } : badge
+        )
+      );
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <div className="background-container">
+      <div className="finish-page">
+      <div className="badge-container">
+        {badges.map((badge) => (
+          <Badge key={badge.id} {...badge} />
+        ))}
+      </div>
+    </div>
+      <h1 className="score">👏 {result} 🪙</h1>
       
       <div className="custom-cadre">
         <h1 className="class-titre">Qui est le meilleur ? :</h1>
@@ -23,9 +59,10 @@ function Finish() {
       </div>
       <div className="custom-cadre2">
       <h1 className="class-titre">Une petit rappel :</h1>
-      <p className="p-class">   </p>
-      <p className="p-class">  <div>🥈</div> <div>CM2-B</div> <div>990 🪙</div>  </p>
-      <p className="p-class">  <div>🥉</div> <div>CP-A</div> <div>960 🪙</div>  </p>
+      <p className="p-class1">En vigilance orange, rentrez chez vous et mettez-vous à l'abri.</p>
+      <p className="p-class1">Même si tout semble calme, restez à l'abri et évitez de téléphoner.</p>
+      <p className="p-class1">En cas d'inondation, ne descendez pas dans les sous-sols, fermez portes et fenêtres.</p>
+      <p className="p-class1">En cas de montée des eaux, montez en étage, évacuez sur ordre avec votre kit.</p>
       </div>
 
 
